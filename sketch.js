@@ -61,8 +61,6 @@ function keyPressed(){
   save('face_bruno_marini.png')
 } */
 
-import { Amplitude } from "../../../.vscode/extensions/samplavigne.p5-vscode-1.2.15/p5types/index";
-
 //!square/circle/square
 /* function setup() {
   createCanvas(500, 500);
@@ -83,28 +81,31 @@ function draw() {
 
 } */
 
+
 function setup() {
-  createCanvas(500, 500);
+  createCanvas(1500, 1500);
   background(0);
 }
 
-function draw() 
-{
-  fill(0);
-  stroke(255, 20);
+function draw() {
+  fill(random(255), random(255), random(255))
+  stroke(255);
   strokeWeight(2);
-  if (mouseIsPressed == true) {
-    myPattern(mouseX, mouseY, 50, 10);
-  }
+  myPattern(mouseX, mouseY, 50, 50);
+
 }
 
+/* function keyPressed(){
+  console.log("keyPressed")
+  save('square.png')
+} */
 
 function myPattern(x, y, d, amp) 
 {
   beginShape();
-  vertex(x - d / 2, y - d / 2); // 0
-  vertex(x + d / 2, y - d / 2); // 1
-  vertex(x + d / 2, y + d / 2); // 2
-  vertex(x - d / 2, y + d / 2); // 3
+  vertex(x - d / 2 + random(-amp, amp), y - d / 2 + random(-amp, amp)); // 0
+  vertex(x + d / 2 + random(-amp, amp), y - d / 2 + random(-amp, amp)); // 1
+  vertex(x + d / 2 + random(-amp, amp), y + d / 2+ random(-amp, amp)); // 2
+  vertex(x - d / 2 + random(-amp, amp), y + d / 2+ random(-amp, amp)); // 3
   endShape(CLOSE);
 }

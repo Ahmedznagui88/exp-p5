@@ -1,4 +1,8 @@
 
+
+
+//!bruno marini
+/* 
 let yMouth = 375; //mouth position
 let dEyes = 30; //eyes position
 let yEyes = 150; // eyes size
@@ -7,8 +11,6 @@ function setup() {
   createCanvas(500, 500);
   angleMode(DEGREES); //!angleMode prende solo un parametro
 }
-
-
 function draw() {
   background(220);
 
@@ -58,8 +60,26 @@ function draw() {
   ellipse(150, yEyes, dEyes, dEyes);
   ellipse(350, yEyes, dEyes, dEyes);
 }
-
 function keyPressed(){
   console.log("keyPressed")
   save('face_bruno_marini.png')
+} */
+
+function setup() {
+  createCanvas(500, 500);
+}
+
+function draw() {
+  background(220);
+  fill(0);
+  noStroke();
+  if(mouseX < width/3){
+    rectMode(CENTER)
+    square(width/2, height/2, 400);
+  }else if(mouseX < 2*width/3){
+    circle(width/2, height/2, 400);
+  }else{
+    triangle(250, 50, 450, 450, 50, 450)
+  }
+
 }

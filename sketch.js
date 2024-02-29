@@ -1,12 +1,8 @@
-
-
-
-//!bruno marini
+//!bruno munari
 /* 
 let yMouth = 375; //mouth position
 let dEyes = 30; //eyes position
 let yEyes = 150; // eyes size
-
 function setup() {
   createCanvas(500, 500);
   angleMode(DEGREES); //!angleMode prende solo un parametro
@@ -65,7 +61,10 @@ function keyPressed(){
   save('face_bruno_marini.png')
 } */
 
-function setup() {
+import { Amplitude } from "../../../.vscode/extensions/samplavigne.p5-vscode-1.2.15/p5types/index";
+
+//!square/circle/square
+/* function setup() {
   createCanvas(500, 500);
 }
 
@@ -82,4 +81,30 @@ function draw() {
     triangle(250, 50, 450, 450, 50, 450)
   }
 
+} */
+
+function setup() {
+  createCanvas(500, 500);
+  background(0);
+}
+
+function draw() 
+{
+  fill(0);
+  stroke(255, 20);
+  strokeWeight(2);
+  if (mouseIsPressed == true) {
+    myPattern(mouseX, mouseY, 50, 10);
+  }
+}
+
+
+function myPattern(x, y, d, amp) 
+{
+  beginShape();
+  vertex(x - d / 2, y - d / 2); // 0
+  vertex(x + d / 2, y - d / 2); // 1
+  vertex(x + d / 2, y + d / 2); // 2
+  vertex(x - d / 2, y + d / 2); // 3
+  endShape(CLOSE);
 }

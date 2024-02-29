@@ -5,9 +5,9 @@ html, body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: #040404;
+  background: #000000;
 }
 
-canvas {
+canvas{
   display: block;
 }

@@ -1,4 +1,4 @@
-let nb = 20;
+let nb = 40;
 let dim = 0;
 
 let margin = 50;

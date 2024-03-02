@@ -81,31 +81,31 @@ function draw() {
 
 } */
 
-
-function setup() {
-  createCanvas(1500, 1500);
+/* function setup() {
+  createCanvas(700, 700);
   background(0);
-}
-
-function draw() {
-  fill(random(255), random(255), random(255))
-  stroke(255);
-  strokeWeight(2);
-  myPattern(mouseX, mouseY, 50, 50);
-
-}
-
-/* function keyPressed(){
-  console.log("keyPressed")
-  save('square.png')
 } */
 
-function myPattern(x, y, d, amp) 
-{
+/* function draw() {
+  fill(random(255), random(25), random(225), random(20));
+  stroke(255, 50);
+  strokeWeight(2);
+  if (mouseIsPressed == true) {
+    myPattern(mouseX, mouseY, 50, 50);
+  }
+}
+
+function myPattern(x, y, d, amp) {
   beginShape();
   vertex(x - d / 2 + random(-amp, amp), y - d / 2 + random(-amp, amp)); // 0
   vertex(x + d / 2 + random(-amp, amp), y - d / 2 + random(-amp, amp)); // 1
-  vertex(x + d / 2 + random(-amp, amp), y + d / 2+ random(-amp, amp)); // 2
-  vertex(x - d / 2 + random(-amp, amp), y + d / 2+ random(-amp, amp)); // 3
+  vertex(x + d / 2 + random(-amp, amp), y + d / 2 + random(-amp, amp)); // 2
+  vertex(x - d / 2 + random(-amp, amp), y + d / 2 + random(-amp, amp)); // 3
   endShape(CLOSE);
 }
+
+function keyPressed(){
+  console.log("keyPressed")
+  save('square.png')
+} 
+ */

@@ -5,9 +5,11 @@ html, body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: #cabdbd;
+  background: rgb(148,150,242);
+background: radial-gradient(circle, rgba(148,150,242,0.7175245098039216) 0%, rgba(0,0,0,1) 86%);
 }
 
 canvas{
   display: block;
 }
+

@@ -21,9 +21,9 @@ function draw(){
         noFill();
         //stroke(220);
         //rect(x,y, dim, dim)
-        stroke(2);
+        stroke(1);
         strokeWeight(3);
-            let rnd = int(random(1, 6));
+            let rnd = int(random(0, 4));
             if (rnd == 1) {
                 line(x, y, x + dim, y + dim);
             } else if (rnd == 2) {
